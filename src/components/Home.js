@@ -1,6 +1,6 @@
 import React from 'react'
 import Gallery from './Gallery'
-
+import Photos from './Photos'
 
 function Home () {
   return (
