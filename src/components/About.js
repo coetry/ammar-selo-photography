@@ -13,8 +13,8 @@ function About () {
         For all inquiries, please shoot me a message or call me at my cell and I will return back to you within 24hrs.
       </p>
       <style jsx>{`
-        p {
-          font-family: Helvetica;
+	div {
+	  margin: 10%;
         }
     `}</style>
   </div>

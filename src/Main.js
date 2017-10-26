@@ -16,9 +16,8 @@ function Main () {
       <Route path="/contact" component={Contact}/>
 
       <style jsx global>{`
-          @import url('https://fonts.googleapis.com/css?family=Open+Sans');
           body {
-            font-family: 'Open Sans', sans-serif;
+            font-family: Montserrat, sans-serif;
             margin: 0;
             padding: 0;
           }

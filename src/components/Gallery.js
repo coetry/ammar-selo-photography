@@ -2,7 +2,6 @@ import React, {Component} from 'react'
 import ReactGallery from 'react-grid-gallery'
 
 
-
 class Gallery extends Component {
   constructor(){
     super();
