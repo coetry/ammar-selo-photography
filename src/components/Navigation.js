@@ -29,7 +29,7 @@ function Navigation () {
           align-items: center;
           background: black;
           justify-content: space-around;
-          height: 100px;
+	  height: 100px;
         }
 
         .logo-container > img {

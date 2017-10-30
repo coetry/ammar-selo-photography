@@ -16,10 +16,15 @@ function Main () {
       <Route path="/contact" component={Contact}/>
 
       <style jsx global>{`
-          body {
+	  * {
+	    margin: 0px;
+	    padding: 0px;
+	  }
+
+	  body {
             font-family: Montserrat, sans-serif;
-            margin: 0;
-            padding: 0;
+	    height: 100%;
+	    width: 100%;
           }
           a.nav-link {
             text-decoration: none;
