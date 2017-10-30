@@ -30,6 +30,7 @@ function Navigation () {
           background: black;
           justify-content: space-around;
 	  height: 100px;
+	  box-shadow: 0 8px 6px -6px black;
         }
 
         .logo-container > img {
