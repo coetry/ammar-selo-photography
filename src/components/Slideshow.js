@@ -9,8 +9,16 @@ class Slideshow extends Component {
 
   render() {
     return (
-      <div>
-        <img src="https://nikonrumors.com/wp-content/uploads/2017/08/Nikon-D850-sample-photos1.jpg" />
+      <div className="slideshow">
+        <img src="http://lorempixel.com/1920/1080" />
+
+        <style jsx>{`
+          .slideshow {
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+          }
+        `}</style>
       </div>
      )
    }

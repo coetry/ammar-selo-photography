@@ -10,30 +10,32 @@ function Main () {
   return (
     <div>
       <Navigation />
-    
+
       <Route exact path="/" component={Home} />
       <Route path="/about" component={About} />
       <Route path="/contact" component={Contact}/>
 
       <style jsx global>{`
-	  * {
-	    margin: 0px;
-	    padding: 0px;
-	  }
+    	  * {
+    	    margin: 0px;
+    	    padding: 0px;
+    	  }
 
-	  body {
-            font-family: Montserrat, sans-serif;
-	    height: 100%;
-	    width: 100%;
-          }
-          a.nav-link {
-            text-decoration: none;
-            text-transform: uppercase;
-            color: white;
-          }
-          .logo-container {
-            margin-top: 50px;
-          }
+    	  body {
+          font-family: Montserrat, sans-serif;
+    	    height: 100%;
+    	    width: 100%;
+        }
+
+        a.nav-link {
+          text-decoration: none;
+          text-transform: uppercase;
+          color: white;
+        }
+
+        .logo-container {
+          margin-top: 50px;
+        }
       `}</style>
     </div>
   )

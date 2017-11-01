@@ -10,7 +10,8 @@ function Home () {
       <Gallery />
       <style jsx>{`
         .container {
-          margin-top: 100px;
+          height: 100%;
+          width: 100%;
         }
       `}</style>
     </div>

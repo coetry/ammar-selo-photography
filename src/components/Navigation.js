@@ -29,12 +29,8 @@ function Navigation () {
           align-items: center;
           background: black;
           justify-content: space-around;
-	  height: 100px;
-	  box-shadow: 0 8px 6px -6px black;
-        }
-
-        .logo-container > img {
-          margin-top: 100px;
+	        height: 100px;
+	        box-shadow: 0 8px 6px -6px black;
         }
 
         .nav-link {
@@ -42,8 +38,7 @@ function Navigation () {
           flex-grow: 1;
           text-decoration: none;
           text-transform: uppercase;
-        }
-        .nav-link {
+          z-index: 10;
           text-transform: uppercase;
           text-decoration: none;
         }
