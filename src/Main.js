@@ -8,7 +8,7 @@ import Home       from './components/Home'
 
 function Main () {
   return (
-    <div>
+    <div className="main-container">
       <Navigation />
 
       <Route exact path="/" component={Home} />
@@ -25,6 +25,10 @@ function Main () {
           font-family: Montserrat, sans-serif;
     	    height: 100%;
     	    width: 100%;
+        }
+
+        .main-container {
+          overflow: hidden;
         }
 
         a.nav-link {

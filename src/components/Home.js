@@ -1,17 +1,19 @@
 import React from 'react'
 import Gallery from './Gallery'
-import Slideshow from './Slideshow.js'
+import Slider from './Slider'
 import Photos from './Photos'
 
 function Home () {
   return (
     <div className='container'>
-      <Slideshow />
+      <Slider />
       <Gallery />
       <style jsx>{`
         .container {
           height: 100%;
           width: 100%;
+          overflow-x: hidden;
+          overflow-y: hidden;
         }
       `}</style>
     </div>
