@@ -18,8 +18,8 @@ class Slider extends Component {
   }
 
   componentDidMount() {
-    window.setInterval(this.changeCurrent.bind(this), 2000)
-    console.log('current:' + this.state.current)
+    window.setInterval(this.changeCurrent.bind(this), 3000);
+    console.log('current:' + this.state.current);
   }
 
   changeCurrent () {

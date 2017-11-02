@@ -10,7 +10,7 @@ class Gallery extends Component {
     }
   }
   componentDidMount() {
-    let dataURL = 'http://ammar-selo-photography.dev/wp-json/wp/v2/media/?per_page=100'
+    let dataURL = 'http://ammar-selo-photography.local//wp-json/wp/v2/media/?per_page=100'
     fetch(dataURL)
       .then(res => res.json())
       .then(res => {
