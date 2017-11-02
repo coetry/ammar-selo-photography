@@ -17,20 +17,24 @@ class Slider extends Component {
 
   componentDidMount() {
     window.setInterval(this.changeCurrent.bind(this), 2000)
+    console.log('current:' + this.state.current)
   }
 
   changeCurrent () {
     let current = this.state.current;
-    let imageArray = this.state.background.length -1;
+    let lastImg = this.state.background.length -1;
 
-    if((current >= 0) && (current !== imageArray)) {
-         this.setState({ current: current + 1 })
-       if(current === imageArray) {
-         this.setState({ current: 0 })
-       }
-     }
-
+    if (current !== lastImg) {
+        current++;
+        this.setState({current: current});
+    } else {
+        current = 0;
+        this.setState({current: current});
+    }
   }
+
+
+
 
   render() {
     return (
