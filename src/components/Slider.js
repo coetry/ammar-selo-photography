@@ -7,11 +7,10 @@ class Slider extends Component {
     super();
     this.state = {
       background: [
-        {'imageUrl': 'https://images.unsplash.com/photo-1505168125601-4ddfdea4c7e7?auto=format&fit=crop&w=751&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D'},
-        {'imageUrl': 'https://images.unsplash.com/photo-1468549940493-46152524296c?auto=format&fit=crop&w=652&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D'},
-        {'imageUrl':'https://images.unsplash.com/photo-1466854076813-4aa9ac0fc347?dpr=1&auto=format&fit=crop&w=1000&q=80&cs=tinysrgb&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D'},
-        {'imageUrl':'https://images.unsplash.com/photo-1462212018902-1ca14eec1bb2?auto=format&fit=crop&w=750&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D'},
-        {'imageUrl':'https://images.unsplash.com/photo-1496264057429-6a331647b69e?auto=format&fit=crop&w=751&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D'}
+        {'imageUrl': 'http://ammar-selo-photography.local/wp-content/uploads/2017/11/Carbon-Fiber.jpg'},
+        {'imageUrl': 'http://ammar-selo-photography.local/wp-content/uploads/2017/11/RRW-178-Edit.jpg'},
+        {'imageUrl': 'http://ammar-selo-photography.local/wp-content/uploads/2017/11/Seared-Ahi-Avocado-Salad-2.jpg'}
+
       ],
       current: 0
     }

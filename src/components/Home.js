@@ -6,8 +6,19 @@ import Photos from './Photos'
 function Home () {
   return (
     <div className='container'>
+
       <Slider />
-      <Gallery />
+
+
+      <section>
+        <h1>Gallery</h1>
+      </section>
+
+      <section>
+
+        <Gallery />
+      </section>
+
       <style jsx>{`
         .container {
           height: 100%;
@@ -15,6 +26,11 @@ function Home () {
           overflow-x: hidden;
           overflow-y: hidden;
         }
+
+        section {
+          margin-top: 50px;
+        }
+
       `}</style>
     </div>
   )
