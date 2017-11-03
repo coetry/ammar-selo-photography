@@ -13,15 +13,10 @@ function Main () {
       <Navigation />
 
       <Route exact path="/" component={Home} />
+      <Route path="/home" component={Home} />
       <Route path="/about" component={About} />
       <Route path="/contact" component={Contact}/>
 
-      <Route path="/general" render={() => <Gallery category="General" />} />
-      <Route path="/portrait" render={() => <Gallery category="Portrait" />} />
-      <Route path="/wedding" render={() => <Gallery category="Wedding" />} />
-      <Route path="/real-estate" render={() => <Gallery category="Real Estate" />} />
-      <Route path="/food" render={() => <Gallery category="Food" />} />
-      <Route path="/products" render={() => <Gallery category="Products" />} />
 
       <style jsx global>{`
     	  * {
@@ -47,6 +42,11 @@ function Main () {
 
         .logo-container {
           margin-top: 50px;
+        }
+
+        .active {
+          color: skyblue;
+          font-weight: bold;
         }
       `}</style>
     </div>

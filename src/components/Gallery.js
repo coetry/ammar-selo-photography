@@ -25,7 +25,8 @@ class Gallery extends Component {
     let IMAGES = []
 
     const filtered_images = this.state.photos.filter((photo) => {
-      return photo.acf.category === this.props.category
+      let category = this.props.category
+      return photo.acf.category === category
     })
 
     filtered_images.map((photo, index) => {

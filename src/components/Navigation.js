@@ -1,26 +1,29 @@
 import React from 'react'
 import Logo  from './Logo'
-import {Link} from 'react-router-dom'
+import {NavLink} from 'react-router-dom'
 
 function Navigation () {
   return (
     <div>
       <div className="nav-container">
-        <Link
+        <NavLink
           className='nav-link'
+          activeClassName='active'
           to='/about'>About
-        </Link>
+        </NavLink>
 
-        <Link
+        <NavLink
           className='nav-link logo-container'
+          activeClassName='active'
           to='/'>
           <Logo height="200" />
-        </Link>
+        </NavLink>
 
-        <Link
+        <NavLink
           className='nav-link'
+          activeClassName='active'
           to='/contact'>Contact
-        </Link>
+        </NavLink>
       </div>
       <style jsx>{`
         .nav-container {
@@ -42,6 +45,8 @@ function Navigation () {
           text-transform: uppercase;
           text-decoration: none;
         }
+
+
       `}</style>
     </div>
   )
