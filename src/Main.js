@@ -30,6 +30,7 @@ function Main () {
           font-family: 'Unica One', sans-serif;
     	    height: 100%;
     	    width: 100%;
+          position: relative;
         }
 
         .main-container {

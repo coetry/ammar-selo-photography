@@ -31,7 +31,9 @@ function Footer () {
           height: 30px;
           background-color: rgba(0,0,0,0.3);
           z-index: 200;
-
+          position: fixed;
+          bottom:0;
+          left:0;
         }
 
         .social-icons ul {
