@@ -9,14 +9,8 @@ function Home () {
 
       <Slider />
 
-
       <section>
-        <h1>Gallery</h1>
-      </section>
-
-      <section>
-
-        <Gallery />
+        <Gallery category="Products" />
       </section>
 
       <style jsx>{`

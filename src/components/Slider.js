@@ -9,8 +9,9 @@ class Slider extends Component {
       background: [
         {'imageUrl': 'http://ammar-selo-photography.local/wp-content/uploads/2017/11/Carbon-Fiber.jpg'},
         {'imageUrl': 'http://ammar-selo-photography.local/wp-content/uploads/2017/11/RRW-178-Edit.jpg'},
-        {'imageUrl': 'http://ammar-selo-photography.local/wp-content/uploads/2017/11/Seared-Ahi-Avocado-Salad-2.jpg'}
-
+        {'imageUrl': 'http://ammar-selo-photography.local/wp-content/uploads/2017/11/Seared-Ahi-Avocado-Salad-2.jpg'},
+        {'imageUrl': 'http://ammar-selo-photography.local/wp-content/uploads/2017/11/Cocohodo_Hero_2880x2304.jpg'},
+        {'imageUrl': 'http://ammar-selo-photography.local/wp-content/uploads/2017/11/5D2_0020-2.jpg'}
       ],
       current: 0
     }

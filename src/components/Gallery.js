@@ -3,8 +3,8 @@ import ReactGallery from 'react-grid-gallery'
 
 
 class Gallery extends Component {
-  constructor(){
-    super();
+  constructor(props){
+    super(props);
     this.state = {
       photos: []
     }
@@ -22,7 +22,11 @@ class Gallery extends Component {
   render () {
     let IMAGES = []
 
-    this.state.photos.map((photo, index) => {
+    const filtered_images = this.state.photos.filter((photo) => {
+      return photo.acf.category === this.props.category
+    })
+
+    filtered_images.map((photo, index) => {
       IMAGES.push(
         {
           src: photo
@@ -41,7 +45,11 @@ class Gallery extends Component {
     })
 
     return (
-      <ReactGallery images={IMAGES} />
+      <div>
+        <h1>{this.props.category}</h1>
+        <ReactGallery images={IMAGES} />
+      </div>
+
     )
 
 
