@@ -6,6 +6,7 @@ import About      from './components/About'
 import Contact    from './components/Contact'
 import Home       from './components/Home'
 import Gallery    from './components/Gallery'
+import Footer     from './components/Footer'
 
 function Main () {
   return (
@@ -17,6 +18,7 @@ function Main () {
       <Route path="/about" component={About} />
       <Route path="/contact" component={Contact}/>
 
+      <Footer />
 
       <style jsx global>{`
     	  * {
@@ -25,7 +27,7 @@ function Main () {
     	  }
 
     	  body {
-          font-family: Montserrat, sans-serif;
+          font-family: 'Unica One', sans-serif;
     	    height: 100%;
     	    width: 100%;
         }

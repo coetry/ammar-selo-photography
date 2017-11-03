@@ -13,20 +13,10 @@ function Home ({match}) {
       <div className="category-nav">
         <ul>
           <li>
-            <Link to='/home/general'>
-              <a>
-                General
-              </a>
-            </Link>
-          </li>
-          <li>
             <Link to='/home/portrait'><a>Portrait</a></Link>
           </li>
           <li>
             <Link to='/home/wedding'><a>Wedding</a></Link>
-          </li>
-          <li>
-            <Link to='/home/real-estate'><a>Real Estate</a></Link>
           </li>
           <li>
             <Link to='/home/food'><a>Food</a></Link>
@@ -62,7 +52,13 @@ function Home ({match}) {
         }
 
         .gallery {
-        
+          display: flex;
+        }
+
+        .ReactGridGallery {
+          display: flex;
+          align-items: center;
+          justify-content: center;
         }
 
         .category-nav {

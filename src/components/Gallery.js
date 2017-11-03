@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import ReactGallery from 'react-grid-gallery'
+import ReactGallery from 'react-photo-gallery'
 
 
 class Gallery extends Component {
@@ -36,34 +36,22 @@ class Gallery extends Component {
                 .media_details
                 .sizes
                 .large
-                  .source_url,
-          thumbnail: photo
-                    .media_details
-                    .sizes
-                    .thumbnail
-                    .source_url,
-          tags: [{value: photo.acf.category, title: photo.acf.category}]
+                .source_url,
+          width: 4,
+          height: 3
         }
       )
     })
 
     return (
-      <div className="gallery">
-        <h1>{this.props.category}</h1>
-        <ReactGallery images={IMAGES} />
-        <style jsx> {`
-            .gallery {
-              align-items: center;
-              justify-content: center;
-            }
-
-
-          `} </style>
+      <div>
+        <ReactGallery columns={3} photos={IMAGES} />
       </div>
     )
 
-
   }
 }
+
+Gallery.defaultProps= {id: "yo"}
 
 export default Gallery
