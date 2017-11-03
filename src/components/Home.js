@@ -2,6 +2,7 @@ import React from 'react'
 import Gallery from './Gallery'
 import Slider from './Slider'
 import Photos from './Photos'
+import {Link, Route} from 'react-router-dom'
 
 function Home () {
   return (
@@ -9,10 +10,13 @@ function Home () {
 
       <Slider />
 
-      <section>
-        <Gallery category="Products" />
-      </section>
-
+      <Link to="/general">General</Link>
+      <Link to="/portrait">Portrait</Link>
+      <Link to="/wedding">Wedding</Link>
+      <Link to="/real-estate">Real Estate</Link>
+      <Link to="/food">Food</Link>
+      <Link to="/products">Products</Link>
+      
       <style jsx>{`
         .container {
           height: 100%;

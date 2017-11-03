@@ -5,6 +5,7 @@ import Navigation from './components/Navigation'
 import About      from './components/About'
 import Contact    from './components/Contact'
 import Home       from './components/Home'
+import Gallery    from './components/Gallery'
 
 function Main () {
   return (
@@ -14,6 +15,13 @@ function Main () {
       <Route exact path="/" component={Home} />
       <Route path="/about" component={About} />
       <Route path="/contact" component={Contact}/>
+
+      <Route path="/general" render={() => <Gallery category="General" />} />
+      <Route path="/portrait" render={() => <Gallery category="Portrait" />} />
+      <Route path="/wedding" render={() => <Gallery category="Wedding" />} />
+      <Route path="/real-estate" render={() => <Gallery category="Real Estate" />} />
+      <Route path="/food" render={() => <Gallery category="Food" />} />
+      <Route path="/products" render={() => <Gallery category="Products" />} />
 
       <style jsx global>{`
     	  * {

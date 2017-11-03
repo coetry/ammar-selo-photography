@@ -18,6 +18,8 @@ class Gallery extends Component {
           photos: res
         })
       })
+
+    console.log(this.props.category)
   }
   render () {
     let IMAGES = []
@@ -30,10 +32,10 @@ class Gallery extends Component {
       IMAGES.push(
         {
           src: photo
-                    .media_details
-                    .sizes
-                    .large
-                    .source_url,
+                .media_details
+                .sizes
+                .large
+                  .source_url,
           thumbnail: photo
                     .media_details
                     .sizes
