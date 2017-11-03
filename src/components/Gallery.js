@@ -48,11 +48,18 @@ class Gallery extends Component {
     })
 
     return (
-      <div>
+      <div className="gallery">
         <h1>{this.props.category}</h1>
         <ReactGallery images={IMAGES} />
-      </div>
+        <style jsx> {`
+            .gallery {
+              align-items: center;
+              justify-content: center;
+            }
 
+
+          `} </style>
+      </div>
     )
 
 

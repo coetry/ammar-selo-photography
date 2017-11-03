@@ -34,10 +34,10 @@ function Main () {
           overflow: hidden;
         }
 
-        a.nav-link {
-          text-decoration: none;
+        a {
           text-transform: uppercase;
           color: white;
+          text-decoration: none
         }
 
         .logo-container {
@@ -48,6 +48,7 @@ function Main () {
           color: skyblue;
           font-weight: bold;
         }
+
       `}</style>
     </div>
   )
