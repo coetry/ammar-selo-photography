@@ -43,6 +43,10 @@ function Main () {
           text-decoration: none
         }
 
+        a:hover {
+          color: skyblue;
+        }
+
         .logo-container {
           margin-top: 50px;
         }

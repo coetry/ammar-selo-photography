@@ -28,12 +28,14 @@ function Footer () {
           font-size: 1em;
           color: black;
           width: 100%;
-          height: 30px;
+          height: 50px;
           background-color: rgba(0,0,0,0.3);
           z-index: 200;
           position: fixed;
           bottom:0;
           left:0;
+          display: flex;
+          align-items: center;
         }
 
         .social-icons ul {
@@ -43,6 +45,7 @@ function Footer () {
 
         .social-icons ul li {
           margin-right: 20px;
+          padding: 5px;
         }
 
         .social-icons ul li a:hover {
