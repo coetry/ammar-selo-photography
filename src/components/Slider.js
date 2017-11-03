@@ -47,6 +47,7 @@ class Slider extends Component {
         <style jsx>{`
           .slideshow {
             overflow: hidden;
+            z-index: -1;
           }
         `}</style>
       </div>

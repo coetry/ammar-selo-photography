@@ -9,7 +9,7 @@ function Logo ({height}) {
          alt='ammar-selo-photography-logo' />
     <style jsx>{`
       img {
-        z-index: 11;
+        z-index: 200;
       }
     `}</style>
     </div>

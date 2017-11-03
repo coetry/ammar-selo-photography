@@ -11,6 +11,7 @@ function Slide ({background, current}) {
           background-size: cover;
           background-position: center;
           animation: kenburns 20s infinite;
+          z-index: -1;
         }
 
         @keyframes kenburns {
