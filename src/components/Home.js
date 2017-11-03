@@ -2,7 +2,7 @@ import React from 'react'
 import Gallery from './Gallery'
 import Slider from './Slider'
 import Photos from './Photos'
-import {Link, Route, Switch} from 'react-router-dom'
+import {NavLink, Route, Switch} from 'react-router-dom'
 
 function Home ({match}) {
   return (
@@ -13,16 +13,16 @@ function Home ({match}) {
       <div className="category-nav">
         <ul>
           <li>
-            <Link to='/home/portrait'><a>Portrait</a></Link>
+            <NavLink activeClassName='active' to='/home/portrait'><a>Portrait</a></NavLink>
           </li>
           <li>
-            <Link to='/home/wedding'><a>Wedding</a></Link>
+            <NavLink activeClassName='active' to='/home/wedding'><a>Wedding</a></NavLink>
           </li>
           <li>
-            <Link to='/home/food'><a>Food</a></Link>
+            <NavLink activeClassName='active' to='/home/food'><a>Food</a></NavLink>
           </li>
           <li>
-            <Link to='/home/products'><a>Products</a></Link>
+            <NavLink activeClassName='active' to='/home/products'><a>Products</a></NavLink>
           </li>
         </ul>
       </div>
@@ -80,10 +80,18 @@ function Home ({match}) {
 
         }
 
-        .category-nav ul li a:hover {
-          opacity: 0.3;
+        .category-nav ul li a {
+          font-size: 2em;
         }
 
+        .category-nav ul li a:hover {
+          color: skyblue;
+        }
+        
+        .active {
+          color: skyblue;
+          font-weight: bold;
+        }
 
       `}</style>
     </div>
