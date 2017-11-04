@@ -1,10 +1,12 @@
 import React from 'react'
-import family from '../ammar_wife_son.jpg'
+import family from '../images/happy-family-2.jpg'
+import pro from '../images/pro-pic.jpg'
 
 function About () {
   return (
     <div className="container">
       <div className="bio-blurb">
+        <img width={150} src={pro} />
         <p>My name is Ammar Selo.
           I have a mechanical engineering degree and have spent
         10 years in the Oil & Gas industry. I discovered my passion for photography
@@ -36,6 +38,10 @@ function About () {
       	  border-radius: 5px;
       	  background-color: rgba(0,0,0,0.7);
       	}
+        .bio-blurb img {
+          border: 2px solid white;
+          border-radius: 3px;
+        }
         .cta-grid {
           padding-top: 20px;
           padding-bottom: 20px;

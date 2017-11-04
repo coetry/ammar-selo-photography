@@ -49,6 +49,7 @@ function Main () {
 
         .logo-container {
           margin-top: 50px;
+          z-index: 100;
         }
 
         .active {

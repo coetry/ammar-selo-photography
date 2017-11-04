@@ -44,7 +44,9 @@ function Navigation () {
           text-transform: uppercase;
           text-transform: uppercase;
           text-decoration: none;
+          z-index: 100;
         }
+
 
 
       `}</style>
