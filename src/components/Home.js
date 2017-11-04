@@ -13,16 +13,16 @@ function Home ({match}) {
       <div className="category-nav">
         <ul>
           <li>
-            <NavLink activeClassName='active' to='/home/portrait'><a>Portrait</a></NavLink>
+            <NavLink onClick={() => window.scroll(0,900)} activeClassName='active' to='/home/portrait'><a>Portrait</a></NavLink>
           </li>
           <li>
-            <NavLink activeClassName='active' to='/home/wedding'><a>Wedding</a></NavLink>
+            <NavLink onClick={() => window.scroll(0,900)} activeClassName='active' to='/home/wedding'><a>Wedding</a></NavLink>
           </li>
           <li>
-            <NavLink activeClassName='active' to='/home/food'><a>Food</a></NavLink>
+            <NavLink onClick={() => window.scroll(0,900)} activeClassName='active' to='/home/food'><a>Food</a></NavLink>
           </li>
           <li>
-            <NavLink activeClassName='active' to='/home/products'><a>Products</a></NavLink>
+            <NavLink onClick={() => window.scroll(0,900)} activeClassName='active' to='/home/products'><a>Products</a></NavLink>
           </li>
         </ul>
       </div>
@@ -87,8 +87,8 @@ function Home ({match}) {
         .category-nav ul li a:hover {
           color: skyblue;
         }
-        
-        .active {
+
+        active {
           color: skyblue;
           font-weight: bold;
         }
