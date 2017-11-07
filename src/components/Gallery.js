@@ -36,13 +36,17 @@ class Gallery extends Component {
           src: photo
                 .media_details
                 .sizes
-                .large
+                .medium
                 .source_url,
           width: photo
                   .media_details
+                  .sizes
+                  .medium
                   .width,
           height: photo
                     .media_details
+                    .sizes
+                    .medium
                     .height
         }
       )
