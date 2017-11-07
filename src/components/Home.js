@@ -13,10 +13,10 @@ function Home ({match}) {
       <div className="category-nav">
         <ul>
           <li>
-            <NavLink onClick={() => window.scroll(0,900)} activeClassName='active' to='/home/portrait'><a>Portrait</a></NavLink>
+            <NavLink onClick={() => window.scroll(0,900)} activeClassName='active' to='/home/portraits'><a>Portraits</a></NavLink>
           </li>
           <li>
-            <NavLink onClick={() => window.scroll(0,900)} activeClassName='active' to='/home/wedding'><a>Wedding</a></NavLink>
+            <NavLink onClick={() => window.scroll(0,900)} activeClassName='active' to='/home/weddings'><a>Weddings</a></NavLink>
           </li>
           <li>
             <NavLink onClick={() => window.scroll(0,900)} activeClassName='active' to='/home/food'><a>Food</a></NavLink>
@@ -30,8 +30,8 @@ function Home ({match}) {
       <div className="gallery">
         <Switch>
           <Route exact path="/home/general" render={() => <Gallery category="General" />} />
-          <Route exact path="/home/portrait" render={() => <Gallery category="Portrait" />} />
-          <Route exact path="/home/wedding" render={() => <Gallery category="Wedding" />} />
+          <Route exact path="/home/portraits" render={() => <Gallery category="Portraits" />} />
+          <Route exact path="/home/weddings" render={() => <Gallery category="Weddings" />} />
           <Route exact path="/home/real-estate" render={() => <Gallery category="Real Estate" />} />
           <Route exact path="/home/food" render={() => <Gallery category="Food" />} />
           <Route exact path="/home/products" render={() => <Gallery category="Products" />} />

@@ -10,7 +10,7 @@ class Gallery extends Component {
     }
   }
   componentDidMount() {
-    let dataURL = 'http://ammar-selo-photography.local/wp-json/wp/v2/media/?per_page=100'
+    let dataURL = 'http://198.58.109.189/wp-json/wp/v2/media/?per_page=100'
     fetch(dataURL)
       .then(res => res.json())
       .then(res => {
@@ -25,6 +25,7 @@ class Gallery extends Component {
     let IMAGES = []
 
     const filtered_images = this.state.photos.filter((photo) => {
+      {/* The category specified by filter link click */}
       let category = this.props.category
       return photo.acf.category === category
     })
