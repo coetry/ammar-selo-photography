@@ -54,6 +54,13 @@ class About extends Component {
             border: 2px solid white;
             border-radius: 3px;
           }
+
+          @media (max-width: 400px) {
+            .bio-blurb {
+              margin-top: 400px;
+            }
+          }
+
           .cta-grid {
             padding-top: 20px;
             padding-bottom: 20px;

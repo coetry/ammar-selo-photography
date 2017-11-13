@@ -1,8 +1,10 @@
 import React, {Component} from 'react'
 import Slide from './Slide'
+import raf from 'raf'
 
 
 class Slider extends Component {
+
   constructor(){
     super();
     this.state = {
@@ -13,37 +15,37 @@ class Slider extends Component {
         {'imageUrl': 'http://198.58.109.189/wp-content/uploads/2017/11/Cocohodo_Hero_2880x2304.jpg'},
         {'imageUrl': 'http://198.58.109.189/wp-content/uploads/2017/11/5D2_0020-2.jpg'}
       ],
-      current: 0
+      currentImg: 0,
+      interval: null
     }
   }
 
   componentDidMount() {
-    window.setInterval(this.changeCurrent.bind(this), 3000);
-    console.log('current:' + this.state.current);
+    this.setState({interval: window.setInterval(this.changeCurrent.bind(this), 3000)})
+  }
+  componentWillUnmount () {
+    clearInterval(this.state.interval)
   }
 
   changeCurrent () {
-    let current = this.state.current;
-    let lastImg = this.state.background.length -1;
+    let currentImg = this.state.currentImg;
+    let lastImg = this.state.background.length - 1;
 
-    if (current !== lastImg) {
-        current++;
-        this.setState({current: current});
+    if (currentImg !== lastImg) {
+        currentImg++;
+        this.setState({currentImg: currentImg});
     } else {
-        current = 0;
-        this.setState({current: current});
+        currentImg = 0;
+        this.setState({currentImg: currentImg});
     }
   }
-
-
-
 
   render() {
     return (
       <div className="slideshow">
         <Slide
           background={this.state.background}
-          current={this.state.current} />
+          current={this.state.currentImg} />
         <style jsx>{`
           .slideshow {
             overflow: hidden;

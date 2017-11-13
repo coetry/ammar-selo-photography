@@ -93,6 +93,12 @@ function Home ({match}) {
           font-weight: bold;
         }
 
+        @media (max-width: 500px) {
+          .category-nav ul li a {
+            font-size: 1.3em;
+          }
+        }
+
       `}</style>
     </div>
   )

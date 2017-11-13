@@ -52,9 +52,11 @@ class Gallery extends Component {
       )
     })
 
+    const viewPortWidth = window.innerWidth;
+
     return (
       <div>
-        <ReactGallery columns={3} photos={IMAGES} />
+        <ReactGallery columns={viewPortWidth <= 400 ? 1 : 3} photos={IMAGES} />
       </div>
     )
 

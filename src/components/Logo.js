@@ -1,10 +1,10 @@
 import React from 'react'
-import atl from '../ammar_triangle_logo.svg'
+import logo from '../images/asp_transparent_circle_bg_silver_stroke.png'
 
 function Logo ({height}) {
   return (
     <div>
-    <img src={atl}
+    <img src={logo}
          height={height}
          alt='ammar-selo-photography-logo' />
     <style jsx>{`
