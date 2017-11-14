@@ -65,7 +65,7 @@ function Home ({match}) {
           display: flex;
           align-items: center;
           justify-content: center;
-          padding-top: 150px;
+          padding-top: 50px;
           padding-bottom: 50px;
         }
 

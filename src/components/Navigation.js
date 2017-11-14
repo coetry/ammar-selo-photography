@@ -4,8 +4,6 @@ import {NavLink} from 'react-router-dom'
 
 function Navigation () {
 
-  const viewPortWidth = window.innerWidth
-
   return (
     <div>
       <div className="nav-container">
@@ -19,9 +17,7 @@ function Navigation () {
           className='nav-link logo-container'
           activeClassName='active'
           to='/'>
-          <Logo height={viewPortWidth <= 500
-                        ? 150
-                        : 200} />
+          <Logo height={150} />
         </NavLink>
 
         <NavLink
@@ -51,9 +47,6 @@ function Navigation () {
           text-decoration: none;
           z-index: 100;
         }
-
-
-
       `}</style>
     </div>
   )

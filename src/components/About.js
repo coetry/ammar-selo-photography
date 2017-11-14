@@ -55,12 +55,6 @@ class About extends Component {
             border-radius: 3px;
           }
 
-          @media (max-width: 400px) {
-            .bio-blurb {
-              margin-top: 400px;
-            }
-          }
-
           .cta-grid {
             padding-top: 20px;
             padding-bottom: 20px;
@@ -86,6 +80,18 @@ class About extends Component {
         	 font-weight: 100;
         	 line-height: 2em;
         	}
+
+          @media (max-width: 400px) {
+
+            .container {
+              background-position: 45%;
+            }
+
+            .bio-blurb {
+              margin-top: 400px;
+            }
+
+          }
       `}</style>
     </div>
     )

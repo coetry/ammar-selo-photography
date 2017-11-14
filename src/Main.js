@@ -7,10 +7,14 @@ import Contact    from './components/Contact'
 import Home       from './components/Home'
 import Gallery    from './components/Gallery'
 import Footer     from './components/Footer'
+import SocialBar  from './components/SocialBar'
 
 function Main () {
   return (
     <div className="main-container">
+
+      
+
       <Navigation />
 
       <Route exact path="/" component={Home} />
@@ -56,8 +60,6 @@ function Main () {
           color: skyblue;
           font-weight: bold;
         }
-
-    
 
       `}</style>
     </div>

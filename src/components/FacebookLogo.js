@@ -7,10 +7,10 @@ const FacebookLogo = props => (
     </svg>
     <style jsx>{`
       svg {
-        fill: white;
+        fill: rgba(255,255,255,1);
       }
       svg:hover{
-        fill:skyblue;
+        fill: rgba(0,0,0,0.7);
       }
     `}</style>
   </div>

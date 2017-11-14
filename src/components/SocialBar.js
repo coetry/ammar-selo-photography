@@ -11,12 +11,12 @@ function SocialBar () {
         <div className="social-icons">
           <ul>
             <li>
-              <a href="https://www.facebook.com/AmmarSelo1">
+              <a target="_blank" href="https://www.facebook.com/AmmarSelo1">
                 <FB width="13" height="13" />
               </a>
             </li>
             <li>
-              <a href="https://www.instagram.com/ammarselophotography/">
+              <a target="_blank" href="https://www.instagram.com/ammarselophotography/">
                 <Insta width="13" height="13" />
               </a>
             </li>
@@ -30,7 +30,7 @@ function SocialBar () {
           background-color: rgba(255,255,255,1);
           z-index: 2;
           position: relative;
-          top:0;
+          bottom:0;
           right:0;
           display: flex;
           align-items: center;

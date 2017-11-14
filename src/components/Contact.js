@@ -8,8 +8,8 @@ function Contact () {
       <h3>Email: ammar@ammarselophotography.com</h3>
       <style jsx>{`
      	div {
-	  margin: 10%;
-	}
+	       margin: 10%;
+	    }
       `}</style>
     </div>
   )
