@@ -14,8 +14,6 @@ function Main () {
   return (
     <div className="main-container">
 
-
-
       <Navigation />
 
       <Route exact path="/" component={Home} />
@@ -33,7 +31,7 @@ function Main () {
     	  }
 
     	  body {
-          font-family: 'Unica One', sans-serif;
+          font-family: 'Open Sans', sans-serif;
     	    height: 100%;
     	    width: 100%;
           position: relative;
