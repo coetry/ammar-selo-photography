@@ -23,7 +23,7 @@ function Navigation () {
         <NavLink
           className='nav-link'
           activeClassName='active'
-          to='/contact'>Contact
+          to='/pricing'>Pricing
         </NavLink>
       </div>
       <style jsx>{`

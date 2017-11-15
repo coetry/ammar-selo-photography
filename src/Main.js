@@ -4,6 +4,7 @@ import {Route} from 'react-router-dom'
 import Navigation from './components/Navigation'
 import About      from './components/About'
 import Contact    from './components/Contact'
+import Pricing    from './components/Pricing'
 import Home       from './components/Home'
 import Gallery    from './components/Gallery'
 import Footer     from './components/Footer'
@@ -13,7 +14,7 @@ function Main () {
   return (
     <div className="main-container">
 
-      
+
 
       <Navigation />
 
@@ -21,6 +22,7 @@ function Main () {
       <Route path="/home" component={Home} />
       <Route path="/about" component={About} />
       <Route path="/contact" component={Contact}/>
+      <Route path="/pricing" component={Pricing}/>
 
       <Footer />
 
