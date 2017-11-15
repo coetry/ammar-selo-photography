@@ -18,7 +18,7 @@ class About extends Component {
     return (
       <div className="container">
         <div className="bio-blurb">
-          <img width={150} src='http://198.58.109.189/wp-content/uploads/2017/11/pro-pic.522969d7.jpg' />
+          <img width={150} src='/wp-content/uploads/2017/11/pro-pic.jpg' />
           <p>My name is Ammar Selo.
             I have a mechanical engineering degree and have spent
           10 years in the Oil & Gas industry. I discovered my passion for photography
@@ -37,7 +37,7 @@ class About extends Component {
         	.container {
         	  margin-top: 0px;
         	  height: 100vh;
-            background-image: url("http://198.58.109.189/wp-content/uploads/2017/11/happy-family-2.f21bfdd2.jpg");
+            background-image: url("/wp-content/uploads/2017/11/happy-family-2.jpg");
         	  background-size: cover;
         	  display: flex;
         	  align-items: center;
