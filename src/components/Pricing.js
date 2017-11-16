@@ -60,10 +60,45 @@ class Pricing extends Component {
           </div>
         </div>
         <section className="ala-carte">
-          Ala Carte
-        </section>
-        <section>
-        </section>
+          <h1>Ala Carte</h1>
+            </section>
+
+
+            <section className="ala-carte-items">
+
+            <ul>
+              <li> Engagement Session</li>
+              <li> 4 Hours Video</li>
+              <li> Additional Photo Hour</li>
+              <li> Additional Video Hour </li>
+              <li>All High Res Images on USB </li>
+              <li> Documentary Video Edit</li>
+              <li> 24" x 36" Canvas/Aluminum</li>
+              <li> 24" x 36" Framed Canvas</li>
+              <li> 30" x 40" <strong>3D</strong> Canvas</li>
+              <li> 12" x 8" Acrylic Album </li>
+              <li> 12" x 15" Acrylic Album  </li>
+              <li> 12" x 18" Acrylic Album </li>
+              </ul>
+              <ul>
+                <li> $350 </li>
+                <li> $600 </li>
+                <li> $250 </li>
+                <li> $150 </li>
+                <li> $500 </li>
+                <li> $600 </li>
+                <li> $350 </li>
+                <li> $400 </li>
+                <li> $450 </li>
+                <li> $500 </li>
+                <li> $700 </li>
+                <li> $1000 </li>
+              </ul>
+
+
+          </section>
+
+
         <style jsx>{`
           .card-container {
             display: grid;
@@ -81,6 +116,11 @@ class Pricing extends Component {
 
           .card {
             box-shadow: 0 0 20px 1px rgba(0,0,0,.18);
+            transition: 0.5s;
+          }
+            .card:hover {
+              box-shadow: 0 8px 16px 0 rgba(0,0,0,0.6);
+}
 
           }
           .card ul li {
@@ -105,6 +145,35 @@ class Pricing extends Component {
 
 
 
+          .ala-carte-items {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap:10px;
+            color:black;
+            font-size: 1.2em;
+            justify-content: center;
+            align-items:center;
+            margin-top: 5%;
+            margin-bottom:20%;
+
+          }
+
+
+          .ala-carte-items ul {
+            list-style: none;
+          }
+
+
+          @media (max-width: 500px) {
+            .ala-carte-items {
+              grid-template-columns: 1fr 1fr;
+              font-size: .8em;
+              grid-gap:20px;
+              justify-content: end;
+
+
+            }
+          }
         `}</style>
       </div>
     )
