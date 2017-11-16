@@ -59,44 +59,43 @@ class Pricing extends Component {
             </Card>
           </div>
         </div>
-        <section className="ala-carte">
-          <h1>Ala Carte</h1>
-            </section>
+        <section className="ala-carte-section-header">
+          <h1>à la carte</h1>
+        </section>
+
+        <section className="ala-carte-items">
+
+          <ul>
+            <li> Engagement Session</li>
+            <li> 4 Hours Video</li>
+            <li> Additional Photo Hour</li>
+            <li> Additional Video Hour </li>
+            <li>All High Res Images on USB </li>
+            <li> Documentary Video Edit</li>
+            <li> 24" x 36" Canvas/Aluminum</li>
+            <li> 24" x 36" Framed Canvas</li>
+            <li> 30" x 40" <strong>3D</strong> Canvas</li>
+            <li> 12" x 8" Acrylic Album </li>
+            <li> 12" x 15" Acrylic Album  </li>
+            <li> 12" x 18" Acrylic Album </li>
+          </ul>
+          <ul>
+            <li> $350 </li>
+            <li> $600 </li>
+            <li> $250 </li>
+            <li> $150 </li>
+            <li> $500 </li>
+            <li> $600 </li>
+            <li> $350 </li>
+            <li> $400 </li>
+            <li> $450 </li>
+            <li> $500 </li>
+            <li> $700 </li>
+            <li> $1000 </li>
+          </ul>
 
 
-            <section className="ala-carte-items">
-
-            <ul>
-              <li> Engagement Session</li>
-              <li> 4 Hours Video</li>
-              <li> Additional Photo Hour</li>
-              <li> Additional Video Hour </li>
-              <li>All High Res Images on USB </li>
-              <li> Documentary Video Edit</li>
-              <li> 24" x 36" Canvas/Aluminum</li>
-              <li> 24" x 36" Framed Canvas</li>
-              <li> 30" x 40" <strong>3D</strong> Canvas</li>
-              <li> 12" x 8" Acrylic Album </li>
-              <li> 12" x 15" Acrylic Album  </li>
-              <li> 12" x 18" Acrylic Album </li>
-              </ul>
-              <ul>
-                <li> $350 </li>
-                <li> $600 </li>
-                <li> $250 </li>
-                <li> $150 </li>
-                <li> $500 </li>
-                <li> $600 </li>
-                <li> $350 </li>
-                <li> $400 </li>
-                <li> $450 </li>
-                <li> $500 </li>
-                <li> $700 </li>
-                <li> $1000 </li>
-              </ul>
-
-
-          </section>
+        </section>
 
 
         <style jsx>{`
@@ -133,7 +132,7 @@ class Pricing extends Component {
             width: 100%;
           }
 
-          .ala-carte {
+          .ala-carte-section-header {
             width: 100%;
             height: 70px;
             background-color: black;
@@ -143,35 +142,26 @@ class Pricing extends Component {
             justify-content: center;
           }
 
-
-
           .ala-carte-items {
             display: grid;
             grid-template-columns: 1fr 1fr;
             grid-gap:10px;
             color:black;
             font-size: 1.2em;
-            justify-content: center;
-            align-items:center;
-            margin-top: 5%;
-            margin-bottom:20%;
-
+            justify-items: center;
+            padding-top: 50px;
+            padding-bottom: 75px;
           }
-
 
           .ala-carte-items ul {
             list-style: none;
+            line-height: 2em;
           }
-
 
           @media (max-width: 500px) {
             .ala-carte-items {
-              grid-template-columns: 1fr 1fr;
-              font-size: .8em;
-              grid-gap:20px;
-              justify-content: end;
-
-
+              margin-left: 10%;
+              font-size: 0.79em;
             }
           }
         `}</style>
