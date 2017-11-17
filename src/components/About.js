@@ -88,7 +88,8 @@ class About extends Component {
             }
 
             .bio-blurb {
-              margin-top: 400px;
+              position: absolute;
+              top: 100px;
             }
 
           }
