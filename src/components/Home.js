@@ -37,7 +37,7 @@ const renderHomeNavigation = (isExact) => {
       return (
         <li className="nav-item" key={path}>
           <NavLink
-            onClick={() => window.scroll(0,900)}
+            onClick={() => window.scroll(0,755)}
             activeClassName='active'
             to={path}
             isActive={(match) => determineDafaultRoute(match, path, isExact)}
