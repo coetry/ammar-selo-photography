@@ -1,15 +1,39 @@
 import React, {Component} from 'react'
 import ReactGallery from 'react-photo-gallery'
 
+const getCategory = (pathname) => {
+  return pathname.split('/')[2] || 'portraits'
+}
 
 class Gallery extends Component {
   constructor(props){
     super(props);
-    this.state = {
+    this.state = this.getInitState()
+  }
+
+  getInitState = () => {
+    const { location: { pathname }} = this.props;
+
+    return {
+      category: getCategory(pathname),
       photos: []
     }
   }
+
   componentDidMount() {
+    this.requestData()
+  }
+
+  componentWillReceiveProps(nextProps) {
+    const currentPath = this.props.location.pathname;
+    const nextPath = nextProps.location.pathname;
+
+    if (currentPath !== nextPath) {
+      this.setState({ category: getCategory(nextPath)})
+    }
+  }
+
+  requestData = () => {
     let dataURL = 'http://198.58.109.189/wp-json/wp/v2/media/?per_page=100'
     fetch(dataURL)
       .then(res => res.json())
@@ -18,21 +42,20 @@ class Gallery extends Component {
           photos: res
         })
       })
-
-    console.log(this.props.category)
   }
-  render () {
-    let IMAGES = []
 
-    const filtered_images = this.state.photos.filter((photo) => {
-      {/* The category specified by filter link click */}
-      let category = this.props.category
-      return photo.acf.category === category
+  render () {
+    const { category, photos } = this.state;
+
+    const filtered_images = photos.filter(photo => {;
+      if (!photo.acf.category) {
+        return false
+      } else {
+        return photo.acf.category.toLowerCase() === category.toLowerCase()
+      }
     })
 
-    filtered_images.map((photo, index) => {
-      IMAGES.push(
-        {
+    const IMAGES = filtered_images.map((photo, index) => ({
           src: photo
                 .media_details
                 .sizes
@@ -48,9 +71,7 @@ class Gallery extends Component {
                     .sizes
                     .medium
                     .height
-        }
-      )
-    })
+    }))
 
     const viewPortWidth = window.innerWidth;
 
@@ -63,6 +84,11 @@ class Gallery extends Component {
   }
 }
 
-Gallery.defaultProps= {id: "yo"}
+Gallery.defaultProps = {
+  location: {
+    pathname: '/home/portraits'
+  },
+  id: "yo"
+}
 
 export default Gallery

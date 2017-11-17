@@ -2,9 +2,54 @@ import React from 'react'
 import Gallery from './Gallery'
 import Slider from './Slider'
 import Photos from './Photos'
-import {NavLink, Route, Switch} from 'react-router-dom'
+import { NavLink, Route, Switch } from 'react-router-dom'
 
-function Home ({match}) {
+const determineDafaultRoute = (match, path, isExact) => {
+    if (match || (!match && isExact && path === '/home/portraits')) {
+      return true
+    } else {
+      return false
+    }
+}
+
+const renderHomeNavigation = (isExact) => {
+    const navItems = [
+      {
+        path: '/home/portraits',
+        text: 'Portraits',
+      },
+      {
+        path: '/home/wedding',
+        text: 'Weddings'
+      },
+      {
+        path: '/home/food',
+        text: 'Food'
+      },
+      {
+        path: '/home/products',
+        text: 'products'
+      }
+    ]
+
+    return navItems.map(item => {
+      const { path, text } = item
+      return (
+        <li className="nav-item" key={path}>
+          <NavLink
+            onClick={() => window.scroll(0,900)}
+            activeClassName='active'
+            to={path}
+            isActive={(match) => determineDafaultRoute(match, path, isExact)}
+          >
+            {text}
+          </NavLink>
+        </li>
+      )
+    })
+}
+
+const Home = ({ match }) => {
   return (
     <div className='container'>
 
@@ -12,29 +57,20 @@ function Home ({match}) {
 
       <div className="category-nav">
         <ul>
-          <li>
-            <NavLink onClick={() => window.scroll(0,900)} activeClassName='active' to='/home/portraits'><a>Portraits</a></NavLink>
-          </li>
-          <li>
-            <NavLink onClick={() => window.scroll(0,900)} activeClassName='active' to='/home/wedding'><a>Weddings</a></NavLink>
-          </li>
-          <li>
-            <NavLink onClick={() => window.scroll(0,900)} activeClassName='active' to='/home/food'><a>Food</a></NavLink>
-          </li>
-          <li>
-            <NavLink onClick={() => window.scroll(0,900)} activeClassName='active' to='/home/products'><a>Products</a></NavLink>
-          </li>
+          {renderHomeNavigation(match.isExact)}
         </ul>
       </div>
 
       <div className="gallery">
         <Switch>
-          <Route exact path="/home/general" render={() => <Gallery category="General" />} />
-          <Route exact path="/home/portraits" render={() => <Gallery category="Portraits" />} />
-          <Route exact path="/home/wedding" render={() => <Gallery category="Wedding" />} />
-          <Route exact path="/home/real-estate" render={() => <Gallery category="Real Estate" />} />
-          <Route exact path="/home/food" render={() => <Gallery category="Food" />} />
-          <Route exact path="/home/products" render={() => <Gallery category="Products" />} />
+          <Route exact path="/" component={Gallery} />
+          <Route exact path="/home" component={Gallery} />
+          <Route exact path="/home/general" component={Gallery} />
+          <Route exact path="/home/portraits" component={Gallery} />
+          <Route exact path="/home/wedding" component={Gallery} />
+          <Route exact path="/home/real-estate" component={Gallery} />
+          <Route exact path="/home/food" component={Gallery} />
+          <Route exact path="/home/products" component={Gallery} />
         </Switch>
       </div>
 
@@ -52,6 +88,7 @@ function Home ({match}) {
         }
 
         .gallery {
+          min-height: 100vh;
           display: flex;
         }
 
@@ -73,19 +110,11 @@ function Home ({match}) {
           display: flex;
           color: white;
           list-style: none;
-        }
-
-        .category-nav li {
-          margin-right: 15px;
-
-        }
-
-        .category-nav ul li a {
           font-size: 2em;
         }
 
-        .category-nav ul li a:hover {
-          color: skyblue;
+        .category-nav :global(.nav-item) {
+          margin-right: 15px;
         }
 
         active {
@@ -94,8 +123,14 @@ function Home ({match}) {
         }
 
         @media (max-width: 500px) {
-          .category-nav ul li a {
+          .category-nav ul {
             font-size: 1.3em;
+          }
+        }
+
+        @media (max-width: 500px) {
+          .category-nav :global(.nav-item) {
+            margin-right: 10px;
           }
         }
 
