@@ -1,7 +1,6 @@
-import React from 'react'
+import React, { Component } from 'react'
 import Gallery from './Gallery'
 import Slider from './Slider'
-import Photos from './Photos'
 import { NavLink, Route, Switch } from 'react-router-dom'
 
 const determineDafaultRoute = (match, path, isExact) => {
@@ -12,6 +11,7 @@ const determineDafaultRoute = (match, path, isExact) => {
     }
 }
 
+<<<<<<< HEAD
 const renderHomeNavigation = (isExact) => {
     const navItems = [
       {
@@ -81,62 +81,145 @@ const Home = ({ match }) => {
           overflow-x: hidden;
           background-color: black;
           color: white;
-        }
+=======
+class Home extends Component {
 
-        section {
-          margin-top: 50px;
-        }
+  handleScrollTop = () => {
+    window.scroll(0, this.homeNav.offsetTop);
+  }
 
-        .gallery {
-          min-height: 100vh;
-          display: flex;
+  renderHomeNavigation = () => {
+      const { match: { isExact } } = this.props;
+      const navItems = [
+        {
+          path: '/home/portraits',
+          text: 'Portraits',
+        },
+        {
+          path: '/home/wedding',
+          text: 'Weddings'
+        },
+        {
+          path: '/home/food',
+          text: 'Food'
+        },
+        {
+          path: '/home/products',
+          text: 'products'
+>>>>>>> d17e98c1d2f213b2d81f1d748babb0858f6a381c
         }
+      ]
 
-        .ReactGridGallery {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-        }
+      return navItems.map(item => {
+        const { path, text } = item
+        return (
+          <li className="nav-item" key={path}>
+            <NavLink
+              onClick={this.handleScrollTop}
+              activeClassName='active'
+              to={path}
+              isActive={(match) => determineDafaultRoute(match, path, isExact)}
+            >
+              {text}
+            </NavLink>
+          </li>
+        )
+      })
+  }
 
-        .category-nav {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          padding-top: 50px;
-          padding-bottom: 50px;
-        }
 
-        .category-nav ul  {
-          display: flex;
-          color: white;
-          list-style: none;
-          font-size: 2em;
-        }
+  render() {
+    return (
+      <div className='container'>
 
-        .category-nav :global(.nav-item) {
-          margin-right: 15px;
-        }
+        <Slider />
 
-        active {
-          color: skyblue;
-          font-weight: bold;
-        }
+        <div
+          className="category-nav"
+          ref={(el) => this.homeNav = el}
+        >
+          <ul>
+            {this.renderHomeNavigation()}
+          </ul>
+        </div>
 
-        @media (max-width: 500px) {
-          .category-nav ul {
-            font-size: 1.3em;
+        <div className="gallery">
+          <Switch>
+            <Route exact path="/" component={Gallery} />
+            <Route exact path="/home" component={Gallery} />
+            <Route exact path="/home/general" component={Gallery} />
+            <Route exact path="/home/portraits" component={Gallery} />
+            <Route exact path="/home/wedding" component={Gallery} />
+            <Route exact path="/home/real-estate" component={Gallery} />
+            <Route exact path="/home/food" component={Gallery} />
+            <Route exact path="/home/products" component={Gallery} />
+          </Switch>
+        </div>
+
+        <style jsx>{`
+          .container {
+            height: 100%;
+            width: 100%;
+            overflow-x: hidden;
+            background-color: black;
+            color: white;
           }
-        }
 
-        @media (max-width: 500px) {
+          section {
+            margin-top: 50px;
+          }
+
+          .gallery {
+            min-height: 100vh;
+            display: flex;
+          }
+
+          .ReactGridGallery {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+
+          .category-nav {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-top: 50px;
+            padding-bottom: 50px;
+          }
+
+          .category-nav ul  {
+            display: flex;
+            color: white;
+            list-style: none;
+            font-size: 2em;
+          }
+
           .category-nav :global(.nav-item) {
-            margin-right: 10px;
+            margin-right: 15px;
           }
-        }
 
-      `}</style>
-    </div>
-  )
+          active {
+            color: skyblue;
+            font-weight: bold;
+          }
+
+          @media (max-width: 500px) {
+            .category-nav ul {
+              font-size: 1.3em;
+            }
+          }
+
+          @media (max-width: 500px) {
+            .category-nav :global(.nav-item) {
+              margin-right: 10px;
+            }
+          }
+
+          `}</style>
+        </div>
+      )
+  }
 }
 
 export default Home
