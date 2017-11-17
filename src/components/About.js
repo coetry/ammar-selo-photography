@@ -90,8 +90,13 @@ class About extends Component {
             .bio-blurb {
               position: absolute;
               top: 100px;
+              height: calc(100% - 200px);
+              overflow: auto;
             }
 
+            :global(.main-container) {
+              height: 100vh;
+            }
           }
       `}</style>
     </div>
