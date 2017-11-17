@@ -11,77 +11,6 @@ const determineDafaultRoute = (match, path, isExact) => {
     }
 }
 
-<<<<<<< HEAD
-const renderHomeNavigation = (isExact) => {
-    const navItems = [
-      {
-        path: '/home/portraits',
-        text: 'Portraits',
-      },
-      {
-        path: '/home/wedding',
-        text: 'Weddings'
-      },
-      {
-        path: '/home/food',
-        text: 'Food'
-      },
-      {
-        path: '/home/products',
-        text: 'products'
-      }
-    ]
-
-    return navItems.map(item => {
-      const { path, text } = item
-      return (
-        <li className="nav-item" key={path}>
-          <NavLink
-            onClick={() => window.scroll(0,755)}
-            activeClassName='active'
-            to={path}
-            isActive={(match) => determineDafaultRoute(match, path, isExact)}
-          >
-            {text}
-          </NavLink>
-        </li>
-      )
-    })
-}
-
-const Home = ({ match }) => {
-  return (
-    <div className='container'>
-
-      <Slider />
-
-      <div className="category-nav">
-        <ul>
-          {renderHomeNavigation(match.isExact)}
-        </ul>
-      </div>
-
-      <div className="gallery">
-        <Switch>
-          <Route exact path="/" component={Gallery} />
-          <Route exact path="/home" component={Gallery} />
-          <Route exact path="/home/general" component={Gallery} />
-          <Route exact path="/home/portraits" component={Gallery} />
-          <Route exact path="/home/wedding" component={Gallery} />
-          <Route exact path="/home/real-estate" component={Gallery} />
-          <Route exact path="/home/food" component={Gallery} />
-          <Route exact path="/home/products" component={Gallery} />
-        </Switch>
-      </div>
-
-      <style jsx>{`
-        .container {
-          height: 100%;
-          width: 100%;
-          overflow-x: hidden;
-          background-color: black;
-          color: white;
-=======
 class Home extends Component {
 
   handleScrollTop = () => {
@@ -106,7 +35,6 @@ class Home extends Component {
         {
           path: '/home/products',
           text: 'products'
->>>>>>> d17e98c1d2f213b2d81f1d748babb0858f6a381c
         }
       ]
 
