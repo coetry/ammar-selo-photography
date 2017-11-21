@@ -3,7 +3,7 @@ import Gallery from './Gallery'
 import Slider from './Slider'
 import { NavLink, Route, Switch } from 'react-router-dom'
 
-const determineDafaultRoute = (match, path, isExact) => {
+const determineDefaultRoute = (match, path, isExact) => {
     if (match || (!match && isExact && path === '/home/portraits')) {
       return true
     } else {
@@ -46,7 +46,7 @@ class Home extends Component {
               onClick={this.handleScrollTop}
               activeClassName='active'
               to={path}
-              isActive={(match) => determineDafaultRoute(match, path, isExact)}
+              isActive={(match) => determineDefaultRoute(match, path, isExact)}
             >
               {text}
             </NavLink>
@@ -134,7 +134,7 @@ class Home extends Component {
 
           @media (max-width: 500px) {
             .category-nav ul {
-              font-size: 1.3em;
+              font-size: 0.9em;
             }
           }
 

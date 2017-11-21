@@ -12,12 +12,12 @@ function Footer () {
           <ul>
             <li>
               <a href="https://www.facebook.com/AmmarSelo1">
-                <FB width="20" height="20" />
+                <FB width="14" height="14" />
               </a>
             </li>
             <li>
               <a href="https://www.instagram.com/ammarselophotography/">
-                <Insta width="20" height="20" />
+                <Insta width="14" height="14" />
               </a>
             </li>
           </ul>
@@ -50,6 +50,10 @@ function Footer () {
 
         .social-icons ul li a:hover {
           color: white;
+        }
+
+        @media (max-width: 500px) {
+          justify-content: center;
         }
 
       `}</style>

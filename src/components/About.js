@@ -94,6 +94,16 @@ class About extends Component {
               overflow: auto;
             }
 
+            .bio-blurb img {
+              float: left;
+              margin: 0 1em 1em 0;
+              position: fixed;
+            }
+
+            .bio-blurb p {
+              position: relative;
+            }
+
             :global(.main-container) {
               height: 100vh;
             }
