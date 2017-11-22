@@ -81,8 +81,7 @@ class About extends Component {
         	 line-height: 2em;
         	}
 
-          @media (max-width: 400px) {
-
+          @media (max-width: 400px) {            
             .container {
               background-position: 45%;
             }
@@ -92,16 +91,6 @@ class About extends Component {
               top: 100px;
               height: calc(100% - 200px);
               overflow: auto;
-            }
-
-            .bio-blurb img {
-              float: left;
-              margin: 0 1em 1em 0;
-              position: fixed;
-            }
-
-            .bio-blurb p {
-              position: relative;
             }
 
             :global(.main-container) {

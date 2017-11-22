@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
 import Gallery from './Gallery'
+import ClientGallery from './ClientGallery'
 import Slider from './Slider'
 import { NavLink, Route, Switch } from 'react-router-dom'
+
 
 const determineDefaultRoute = (match, path, isExact) => {
     if (match || (!match && isExact && path === '/home/portraits')) {
@@ -34,7 +36,11 @@ class Home extends Component {
         },
         {
           path: '/home/products',
-          text: 'products'
+          text: 'Products'
+        },
+        {
+          path: '/home/client-gallery',
+          text: 'CG'
         }
       ]
 
@@ -81,6 +87,7 @@ class Home extends Component {
             <Route exact path="/home/real-estate" component={Gallery} />
             <Route exact path="/home/food" component={Gallery} />
             <Route exact path="/home/products" component={Gallery} />
+            <Route exact path="/home/client-gallery" component={ClientGallery} />
           </Switch>
         </div>
 

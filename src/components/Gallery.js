@@ -67,10 +67,10 @@ class Gallery extends Component {
                   .large
                   .width,
           height: photo
-                    .media_details
-                    .sizes
-                    .large
-                    .height
+                   .media_details
+                   .sizes
+                   .large
+                   .height
     }))
 
     const viewPortWidth = window.innerWidth;
