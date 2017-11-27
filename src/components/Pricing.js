@@ -99,6 +99,11 @@ class Pricing extends Component {
 
 
         <style jsx>{`
+
+          .container {
+            width: 100%;
+          }
+
           .card-container {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
@@ -125,11 +130,6 @@ class Pricing extends Component {
           .card ul li {
             margin: 0px;
             padding: 16px;
-          }
-
-
-          .container {
-            width: 100%;
           }
 
           .ala-carte-section-header {
