@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
 import Gallery from './Gallery'
+import ClientGallery from './ClientGallery'
 import Slider from './Slider'
 import { NavLink, Route, Switch } from 'react-router-dom'
+import {width, height, fontSize, space} from 'styled-system'
 
 const determineDafaultRoute = (match, path, isExact) => {
     if (match || (!match && isExact && path === '/home/portraits')) {
@@ -34,7 +36,11 @@ class Home extends Component {
         },
         {
           path: '/home/products',
-          text: 'products'
+          text: 'Products'
+        },
+        {
+          path: '/home/client-gallery',
+          text: 'Client Gallery'
         }
       ]
 
@@ -81,6 +87,7 @@ class Home extends Component {
             <Route exact path="/home/real-estate" component={Gallery} />
             <Route exact path="/home/food" component={Gallery} />
             <Route exact path="/home/products" component={Gallery} />
+            <Route exact path="/home/client-gallery" component={ClientGallery} />
           </Switch>
         </div>
 
@@ -120,7 +127,7 @@ class Home extends Component {
             display: flex;
             color: white;
             list-style: none;
-            font-size: 2em;
+            font-size: ${fontSize};
           }
 
           .category-nav :global(.nav-item) {
@@ -134,7 +141,7 @@ class Home extends Component {
 
           @media (max-width: 500px) {
             .category-nav ul {
-              font-size: 1.3em;
+
             }
           }
 

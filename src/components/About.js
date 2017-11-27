@@ -1,4 +1,7 @@
 import React, {Component} from 'react'
+import {width, height, fontSize, space} from 'styled-system'
+
+
 
 class About extends Component {
 
@@ -19,7 +22,7 @@ class About extends Component {
       <div className="container">
         <div className="bio-blurb">
           <img width={150} src='/wp-content/uploads/2017/11/pro-pic.jpg' />
-          <p>My name is Ammar Selo.
+          <p width={[1,2,3]}>My name is Ammar Selo.
             I have a mechanical engineering degree and have spent
           10 years in the Oil & Gas industry. I discovered my passion for photography
           a few years back so I left the corporate life to pursue my passion full time.
@@ -92,6 +95,10 @@ class About extends Component {
               top: 100px;
               height: calc(100% - 200px);
               overflow: auto;
+            }
+
+            .bio-blurb img {
+              margin-top: 100px;
             }
 
             :global(.main-container) {

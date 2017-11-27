@@ -1,6 +1,6 @@
 import React from 'react'
-import FB from './FacebookLogo'
-import Insta from './InstagramLogo'
+import fb_logo from '../images/FB-f-Logo__blue_50.png'
+import ig_logo from '../images/ig_logo.png'
 
 function Footer () {
 
@@ -11,13 +11,13 @@ function Footer () {
         <div className="social-icons">
           <ul>
             <li>
-              <a href="https://www.facebook.com/AmmarSelo1">
-                <FB width="20" height="20" />
+              <a target="_blank" href="https://www.facebook.com/AmmarSelo1">
+                <img className="fb-logo" width="20" height="20" src={fb_logo} />
               </a>
             </li>
             <li>
-              <a href="https://www.instagram.com/ammarselophotography/">
-                <Insta width="20" height="20" />
+              <a target="_blank" href="https://www.instagram.com/ammarselophotography/">
+                <img width="30" height="30" src={ig_logo} />
               </a>
             </li>
           </ul>
@@ -44,12 +44,16 @@ function Footer () {
         }
 
         .social-icons ul li {
-          margin-right: 20px;
+          margin-right: 9px;
           padding: 5px;
         }
 
         .social-icons ul li a:hover {
           color: white;
+        }
+
+        .fb-logo {
+          margin-top: 4px;
         }
 
       `}</style>
