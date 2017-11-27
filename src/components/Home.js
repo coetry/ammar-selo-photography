@@ -41,7 +41,7 @@ class Home extends Component {
         },
         {
           path: '/home/client-gallery',
-          text: 'Client Gallery'
+          text: 'Client Albums'
         }
       ]
 
@@ -119,9 +119,14 @@ class Home extends Component {
           .category-nav {
             display: flex;
             align-items: center;
-            justify-content: center;
             padding-top: 50px;
             padding-bottom: 50px;
+          }
+
+          @media (min-width: 700px) {
+            .category-nav {
+              justify-content: center;
+            }
           }
 
           .category-nav ul  {
@@ -141,14 +146,21 @@ class Home extends Component {
           }
 
           @media (max-width: 500px) {
-            .category-nav ul {
-              font-size: 0.9em;
-            }
+
           }
 
           @media (max-width: 500px) {
-            .category-nav :global(.nav-item) {
+
+            .category-nav ul {
+              font-size: 1.2em;
+            }
+
+            .category-nav {
               margin-right: 10px;
+              flex-wrap: nowrap;
+              overflow-x: auto;
+              -webkit-overflow-scrolling: touch;
+              -ms-overflow-style: -ms-autohiding-scrollbar;
             }
           }
 

@@ -48,7 +48,7 @@ class ClientGallery extends Component {
     return albums.map(album => {
       return (
         <div className="card">
-          <AlbumCard width={356}>
+          <AlbumCard width={256}>
             <BackgroundImage ratio={1} src={album.acf.client_album_cover_photo.sizes.large} />
             <Subhead p={1}>
               <a href={album.acf.client_album_link}>
@@ -78,7 +78,7 @@ class ClientGallery extends Component {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
             grid-gap: 20px;
-            margin: 40px;
+            justify-items: center;
           }
 
           @media (max-width: 500px) {
