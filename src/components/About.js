@@ -42,15 +42,22 @@ class About extends Component {
         	  height: 100vh;
             background-image: url("/wp-content/uploads/2017/11/happy-family-2.jpg");
         	  background-size: cover;
-        	  display: flex;
-        	  align-items: center;
-        	  justify-content: center;
+            display: flex;
+            align-items: center;
         	}
+
+          @media (min-width: 700px) {
+            .container {
+              justify-content: center;
+            }
+            .bio-blurb {
+              max-width: 70%;
+            }
+          }
+
         	.bio-blurb {
-        	  max-width: 70%;
         	  color: white;
         	  padding: 50px;
-        	  border-radius: 5px;
         	  background-color: rgba(0,0,0,0.7);
         	}
           .bio-blurb img {
@@ -84,7 +91,7 @@ class About extends Component {
         	 line-height: 2em;
         	}
 
-          @media (max-width: 400px) {
+          @media (max-width: 500px) {
             .container {
               background-position: 45%;
             }
@@ -97,23 +104,14 @@ class About extends Component {
             }
 
             .bio-blurb img {
-<<<<<<< HEAD
-              margin-top: 100px;
-=======
-              float: left;
-              margin: 0 1em 1em 0;
-              position: fixed;
+              margin: 1em 1em 1em 0;
             }
 
             .bio-blurb p {
-              position: relative;
+
             }
 
->>>>>>> client-gallery
-            :global(.main-container) {
-              height: 100vh;
-            }
-          }
+
       `}</style>
     </div>
     )
