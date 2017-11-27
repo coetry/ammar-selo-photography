@@ -73,6 +73,7 @@ class ClientGallery extends Component {
         <style jsx>{`
           .container {
             width: 100%;
+            margin-bottom: 100px;
           }
           .card-container {
             display: grid;
