@@ -98,7 +98,17 @@ class About extends Component {
             }
 
             .bio-blurb img {
+<<<<<<< HEAD
               margin-top: 100px;
+=======
+              float: left;
+              margin: 0 1em 1em 0;
+              position: fixed;
+            }
+
+            .bio-blurb p {
+              position: relative;
+>>>>>>> 4946498bc450bcf66fc83a83b5bd6e096966e6ea
             }
 
             :global(.main-container) {
