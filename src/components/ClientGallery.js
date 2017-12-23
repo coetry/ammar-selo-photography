@@ -45,10 +45,12 @@ class ClientGallery extends Component {
   renderClientGallery () {
     const { albums } = this.state
 
+    const viewportWidth = window.innerWidth;
+
     return albums.map(album => {
       return (
         <div className="card">
-          <AlbumCard width={256}>
+          <AlbumCard width={viewportWidth <= 500 ? 256 : 350}>
             <BackgroundImage ratio={1} src={album.acf.client_album_cover_photo.sizes.large} />
             <Subhead p={1}>
               <a href={album.acf.client_album_link}>

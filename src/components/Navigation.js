@@ -10,20 +10,22 @@ function Navigation () {
         <NavLink
           className='nav-link'
           activeClassName='active'
-          to='/about'>About
+          to='/'>Home
         </NavLink>
-
-        <NavLink
-          className='nav-link logo-container'
-          activeClassName='active'
-          to='/'>
-          <Logo height={150} />
-        </NavLink>
-
         <NavLink
           className='nav-link'
           activeClassName='active'
-          to='/pricing'>Pricing
+          to='/portfolio'>Portfolio
+        </NavLink>
+        <NavLink
+          className='nav-link'
+          activeClassName='active'
+          to='/investment'>Investment
+        </NavLink>
+        <NavLink
+          className='nav-link'
+          activeClassName='active'
+          to='/client-galleries'>Client Galleries
         </NavLink>
       </div>
       <style jsx>{`

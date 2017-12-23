@@ -67,30 +67,52 @@ class Pricing extends Component {
 
           <ul>
             <li> Engagement Session</li>
+            <br />
             <li> 4 Hours Video</li>
+            <br />
             <li> Additional Photo Hour</li>
+            <br />
             <li> Additional Video Hour </li>
-            <li>All High Res Images on USB </li>
+            <br />
+            <li> All High Res Images on USB </li>
+            <br />
             <li> Documentary Video Edit</li>
+            <br />
             <li> 24" x 36" Canvas/Aluminum</li>
+            <br />
             <li> 24" x 36" Framed Canvas</li>
+            <br />
             <li> 30" x 40" <strong>3D</strong> Canvas</li>
+            <br />
             <li> 12" x 8" Acrylic Album </li>
+            <br />
             <li> 12" x 15" Acrylic Album  </li>
+            <br />
             <li> 12" x 18" Acrylic Album </li>
           </ul>
           <ul>
             <li> $350 </li>
+            <br />
             <li> $600 </li>
+            <br />
             <li> $250 </li>
+            <br />
             <li> $150 </li>
+            <br />
             <li> $500 </li>
+            <br />
             <li> $600 </li>
+            <br />
             <li> $350 </li>
+            <br />
             <li> $400 </li>
+            <br />
             <li> $450 </li>
+            <br />
             <li> $500 </li>
+            <br />
             <li> $700 </li>
+            <br />
             <li> $1000 </li>
           </ul>
 
@@ -145,9 +167,8 @@ class Pricing extends Component {
           .ala-carte-items {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            grid-gap:10px;
             color:black;
-            font-size: 1.2em;
+            font-size: 1.1em;
             justify-items: center;
             padding-top: 50px;
             padding-bottom: 75px;
@@ -160,8 +181,9 @@ class Pricing extends Component {
 
           @media (max-width: 500px) {
             .ala-carte-items {
-              margin-left: 10%;
+              margin-left: 8%;
               font-size: 0.79em;
+              grid-gap: 50px;
             }
           }
         `}</style>

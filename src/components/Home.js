@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Gallery from './Gallery'
 import ClientGallery from './ClientGallery'
+import SwipeableViews from 'react-swipeable-views';
 import Slider from './Slider'
 import { NavLink, Route, Switch } from 'react-router-dom'
 import {width, height, fontSize, space} from 'styled-system'
