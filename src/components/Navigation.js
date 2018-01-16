@@ -10,6 +10,11 @@ function Navigation () {
         <NavLink
           className='nav-link'
           activeClassName='active'
+          to='/'><Logo height={100} />
+        </NavLink>
+        <NavLink
+          className='nav-link'
+          activeClassName='active'
           to='/'>Home
         </NavLink>
         <NavLink

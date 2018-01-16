@@ -1,10 +1,11 @@
 import React from 'react'
+import logo from '../images/asp_transparent_circle_bg_silver_stroke.png'
 
 
 function Logo ({height}) {
   return (
     <div>
-    <img src="/wp-content/uploads/2017/11/asp_transparent_circle_bg_silver_stroke.png"
+    <img src={logo}
          height={height}
          alt='ammar-selo-photography-logo' />
     <style jsx>{`

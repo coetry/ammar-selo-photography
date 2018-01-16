@@ -1,14 +1,14 @@
 import React from 'react';
 import {Route} from 'react-router-dom'
 
-import Navigation from './components/Navigation'
-import About      from './components/About'
-import Contact    from './components/Contact'
-import Pricing    from './components/Pricing'
-import Home       from './components/Home'
-import Gallery    from './components/Gallery'
-import Footer     from './components/Footer'
-import SocialBar  from './components/SocialBar'
+import Navigation    from './components/Navigation'
+import Portfolio     from './components/Portfolio'
+import Investment    from './components/Investment'
+import ClientGallery from './components/ClientGallery'
+import Home          from './components/Home'
+import Gallery       from './components/Gallery'
+import Footer        from './components/Footer'
+import SocialBar     from './components/SocialBar'
 
 function Main () {
   return (
@@ -18,9 +18,9 @@ function Main () {
 
       <Route exact path="/" component={Home} />
       <Route path="/home" component={Home} />
-      <Route path="/about" component={About} />
-      <Route path="/contact" component={Contact}/>
-      <Route path="/pricing" component={Pricing}/>
+      <Route path="/portfolio" component={Portfolio} />
+      <Route path="/investment" component={Investment} />
+      <Route path="/client-galleries" component={ClientGallery} />
 
       <Footer />
 

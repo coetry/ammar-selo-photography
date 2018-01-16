@@ -49,6 +49,7 @@ class ClientGallery extends Component {
 
     return albums.map(album => {
       return (
+
         <div className="card">
           <AlbumCard width={viewportWidth <= 500 ? 256 : 350}>
             <BackgroundImage ratio={1} src={album.acf.client_album_cover_photo.sizes.large} />
@@ -67,6 +68,8 @@ class ClientGallery extends Component {
 
     return (
       <div className="container">
+
+        <h1>Client Galleries</h1>
 
         <div className="card-container">
           {this.renderClientGallery()}

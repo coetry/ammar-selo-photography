@@ -1,7 +1,5 @@
 import React, {Component} from 'react'
 import Slide from './Slide'
-import raf from 'raf'
-
 
 class Slider extends Component {
 
@@ -9,11 +7,10 @@ class Slider extends Component {
     super();
     this.state = {
       background: [
-        {'imageUrl': 'http://198.58.109.189/wp-content/uploads/2017/11/Carbon-Fiber.jpg'},
-        {'imageUrl': 'http://198.58.109.189/wp-content/uploads/2017/11/RRW-178-Edit.jpg'},
-        {'imageUrl': 'http://198.58.109.189/wp-content/uploads/2017/11/Seared-Ahi-Avocado-Salad-2.jpg'},
-        {'imageUrl': 'http://198.58.109.189/wp-content/uploads/2017/11/Cocohodo_Hero_2880x2304.jpg'},
-        {'imageUrl': 'http://198.58.109.189/wp-content/uploads/2017/11/5D2_0020-2.jpg'}
+        {'imageUrl': 'http://lorempixel.com/1920/1080'},
+        {'imageUrl': 'http://lorempixel.com/1920/1080'},
+        {'imageUrl': 'http://lorempixel.com/1920/1080'},
+        {'imageUrl': 'http://lorempixel.com/1920/1080'}
       ],
       currentImg: 0,
       interval: null
